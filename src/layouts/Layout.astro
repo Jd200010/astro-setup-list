@@ -16,6 +16,16 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav>
+			<div class="navbar-left">
+				<div><a href='/'><h4>HOME</h4></a></div>
+				<div><a href='/tech'><h4>TECH</h4></a></div>
+				<div><a href='/about'><h4>ABOUT</h4></a></div>
+			</div>
+			<div class="navbar-right">
+				
+			</div>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -23,6 +33,30 @@ const { title } = Astro.props;
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	nav {
+  		padding: 0px 10px 0px 10px;
+  		background-color: white;
+  		border-bottom: 1px solid grey;
+  		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+  		position: sticky;
+ 		z top:0;
+	}
+	.navbar-left div {
+  		text-transform: uppercase;
+  		font-weight: 600;
+  		margin-left: 20px;
+  		padding: 0px;
+	}
+	.navbar-left, .navbar-right, .socials {
+  		display: flex;
+  		align-items: center;
+	}
+	.navbar-left * {
+  		text-decoration: none;
+  		color: black;
 	}
 	html {
 		font-family: system-ui, sans-serif;
