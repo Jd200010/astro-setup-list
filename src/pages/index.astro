@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Cards from '../components/Cards.astro';
 
 const posts = (await Astro.glob('./posts/*.md'))
 ---
@@ -8,21 +8,7 @@ const posts = (await Astro.glob('./posts/*.md'))
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>My <span class="text-gradient">Tech</span></h1>
-		<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-			{
-				posts.map(post => (
-					<a href={post.url}>
-						<div class="ring-1 rounded-sm post">
-							<h3>{post.frontmatter.title}</h3>
-							{post.frontmatter.description && (
-                      			<h5 class="opacity-70">
-                        		{post.frontmatter.description}
-                      			</h5>)}
-						</div>
-					</a>
-				))
-			}
-		</ul>
+		<Cards />
 	</main>
 </Layout>
 
