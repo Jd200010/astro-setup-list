@@ -1,6 +1,6 @@
 ---
 description: Mechanical keyboard
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/Post.astro
 public: true
 title: Razer Huntsman
 tags:
