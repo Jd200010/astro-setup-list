@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../config';
 export interface Props {
-  content: {
+  frontmatter: {
     title: string
     description: string
     createdAt?: string
@@ -13,7 +13,7 @@ export interface Props {
   }
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter: {title, description, tags} } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -21,16 +21,20 @@ const { frontmatter } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-        <title>{frontmatter.title + ` - ${SITE_TITLE}`}</title>
+        <title>{title + ` - ${SITE_TITLE}`}</title>
 	</head>
 	<body>
 		<Navbar />
-		<div class="container mx-auto flex justify-center border-solid border-zinc-900 border-x-2 my-4">
-            <h1>{frontmatter.title}</h1>
-            <div>{frontmatter.description}</div>
-            <hr/>
-			<slot />
-		</div>
+		<article class="px-8 max-w-3xl pt-6 mx-auto">
+			<div class="container mx-auto border-solid border-zinc-500 border-x-2 my-4">
+            	<h1 class="text-3xl mx-6">{title}</h1>
+            	<div class="mx-6">{description}</div>
+            	<hr class="border-top my-2 mx-6"/>
+				<div class="mx-6">
+					<slot />
+				</div>
+			</div>
+		</article>
 	</body>
 	<Footer />
 </html>
