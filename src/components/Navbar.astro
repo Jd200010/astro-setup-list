@@ -1,5 +1,5 @@
 ---
-
+import ThemeButton from "./ThemeButton";
 ---
 <nav class="px-8 max-w-3xl pt-6 mx-auto">
     <div class="navbar-left">
@@ -7,7 +7,7 @@
         <div><a href='/about'><h1>ABOUT</h1></a></div>
     </div>
     <div class="navbar-right">
-        
+        <ThemeButton client:visible />
     </div>
 </nav>
 
@@ -15,7 +15,6 @@
     nav {
         padding: 0px 20px 0px 20px;
         font-size: 20px;
-        background-color: white;
         border-bottom: 1px solid grey;
         display: flex;
         justify-content: space-between;

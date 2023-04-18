@@ -23,7 +23,7 @@ const { frontmatter: {title, description, tags} } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
         <title>{title + ` - ${SITE_TITLE}`}</title>
 	</head>
-	<body>
+	<body class="dark:bg-slate-800 dark:text-neutral-300">
 		<Navbar />
 		<article class="px-8 max-w-3xl pt-6 mx-auto">
 			<div class="container mx-auto border-solid border-zinc-500 border-x-2 my-4">
