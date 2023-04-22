@@ -1,10 +1,10 @@
 ---
 import ThemeButton from "./ThemeButton";
 ---
-<nav class="px-8 max-w-3xl pt-6 mx-auto">
-    <div class="navbar-left">
-        <div><a href='/'><h1>HOME</h1></a></div>
-        <div><a href='/about'><h1>ABOUT</h1></a></div>
+<nav class="px-8 max-w-3xl pt-6 mx-auto flex items-center content-center justify-around border-b border-black dark:border-zinc-400">
+    <div class="navbar-left flex content-center">
+        <div class="px-2"><a href='/'><h1>HOME</h1></a></div>
+        <div class="px-2"><a href='/about'><h1>ABOUT</h1></a></div>
     </div>
     <div class="navbar-right">
         <ThemeButton client:visible />
@@ -12,39 +12,4 @@ import ThemeButton from "./ThemeButton";
 </nav>
 
 <style>
-    nav {
-        padding: 0px 20px 0px 20px;
-        font-size: 20px;
-        border-bottom: 1px solid grey;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        top:0;
-    }
-
-    nav > div {
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-left: 20px;
-        padding: 0px;
-        cursor: pointer;
-    }
-
-    .navbar-left, .navbar-right {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar-left div {
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-left: 20px;
-        padding: 0px;
-        cursor: pointer;
-    }
-
-    .navbar-left div:hover {
-        text-decoration: underline;
-    }
 </style>
