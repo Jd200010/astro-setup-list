@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards.astro';
+import Content from '../components/Content.astro';
 import Masthead from '../components/Masthead.astro';
-import { Image } from '@astrojs/image/components'
 
 const posts = (await Astro.glob('./posts/*.md'))
 ---
 
 <Layout title="Home">
-	<main>
+	<Content>
 		<h1 class="text-4xl my-2"> My Tech</h1>
 		<Cards />
-	</main>
+	</Content>
 </Layout>
 
 <style>

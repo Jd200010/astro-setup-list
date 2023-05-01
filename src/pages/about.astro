@@ -1,21 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Content from '../components/Content.astro';
 ---
 
 <Layout title="About">
-<h1 class="text-3xl">Hey there!</h1>
-<div class="bg-black dark:bg-zinc-400 w-[148px] h-[1px] mt-1"></div>
-<div class="my-4">
-    <p>My Name is Josh Trotter, I am an aspiring software dev. I made this website to learn more about frontend development.
-       The technology I used to create it is Astro JS, React and Netlify.
-    </p>
-    <br>
-    <p>Some of the programming languages I know are</p>
-    <ul class="list-disc mx-10">
-        <li>Javascript</li>
-        <li>Python</li>
-        <li>Some Java</li>
-        <li>Some C</li>
-    </ul>
-</div>
+    <Content>
+    <h1 class="text-3xl">Hey there!</h1>
+    <div class="bg-black dark:bg-zinc-400 w-[148px] h-[1px] mt-1"></div>
+    <div class="my-2">
+        <p>My Name is Josh Trotter, I am an aspiring software dev. I made this website to learn more about frontend development.
+        The technology I used to create it is Astro JS, React and Netlify.
+        </p>
+        <br>
+        <p>Some of the programming languages I know are</p>
+        <ul class="list-disc mx-10">
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>Some Java</li>
+            <li>Some C</li>
+        </ul>
+    </div>
+    </Content>
 </Layout>
