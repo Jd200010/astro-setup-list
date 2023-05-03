@@ -8,8 +8,13 @@ const posts = (await Astro.glob('./posts/*.md'))
 ---
 
 <Layout title="Home">
+	<section class="mb-6">
+		<div class="text-center text-4xl">
+			<h1>My Tech</h1>
+			<hr class="w-48 mx-auto mt-1 border-1 border-slate-950 dark:border-zinc-100 rounded align-middle"/>
+		</div>
+	</section>
 	<Content>
-		<h1 class="text-4xl my-2"> My Tech</h1>
 		<Cards />
 	</Content>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import Content from '../components/Content.astro'
 import { SITE_TITLE } from '../config';
 export interface Props {
   frontmatter: {
@@ -27,12 +28,14 @@ const { frontmatter: {title, description, tags} } = Astro.props;
 		<Navbar />
 		<article class="px-8 max-w-3xl mx-auto pt-[48px]">
 			<div class="container mx-auto border-solid border-zinc-500 border-x-2 my-4">
-            	<h1 class="text-3xl mx-6">{title}</h1>
-            	<div class="mx-6">{description}</div>
-            	<hr class="border-stone-700 dark:border-neutral-300 border-top my-2 mx-6"/>
-				<div class="mx-6">
-					<slot />
-				</div>
+				<Content>
+            		<h1 class="text-3xl mx-6">{title}</h1>
+            		<div class="mx-6">{description}</div>
+            		<hr class="border-stone-700 dark:border-neutral-300 border-top my-2 mx-6"/>
+					<div class="grid mx-6 leading-6 gap-y-2">
+						<slot />
+					</div>
+				</Content>
 			</div>
 		</article>
 	</body>
